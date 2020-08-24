@@ -4,9 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    
+    <div class="grid-wrapper">
+
+        <!-- HEADER----------------------------------->
+        <header class="header">
+            <div class="menu">
+                <svg class="menu__icon">
+                    <use xlink:href="img/sprite.svg#icon-menu"></use>
+                </svg>            
+                <img src="img/YouTube_logo.svg" alt="logo" class="menu__logo">
+            </div>  
+            
+            <form action="#" class="search">
+                <input type="text" class="search__bar" placeholder="Search">  
+                <button class="search__button">                   
+                </button>
+                <svg class="search__icon">
+                    <use xlink:href="img/sprite.svg#icon-search"></use>
+                </svg> 
+            </form> 
+
+            <div class="user">
+                <svg class="user__camera">
+                    <use xlink:href="img/sprite.svg#icon-video-camera"></use>
+                </svg>   
+                <svg class="user__box-menu">
+                    <use xlink:href="img/sprite.svg#icon-paragraph-justify"></use>
+                </svg>   
+                <svg class="user__bell">
+                    <use xlink:href="img/sprite.svg#icon-bell"></use>
+                </svg>   
+                <img src="img/icon.jpg" alt="user icon" class="user__icon">
+            </div>
+            
+        </header>
+
+    <!-------------------------------------------------------->
+        
+        
+        <main class="main">
+            <iframe width="854" height="480" src="https://www.youtube.com/embed/OjIxscGV-Qg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </main>
+        <aside class="sidebar">Sidebar</aside>
+        
+        <section class="headline">
+            <h1 class="headline__main">Creative SVG Backgrounds for Modern Web Design</h1>
+            <div class="headline__views">425,613 views</div>
+            <div class="headline__date">•Apr 24, 2018</div>
+            <div class="headline__cta">10k 222 share save</div>
+        </section>
+        
+        <section class="video-description">Video description</section>
+        <section class="comments">Comments</section>
+    </div>
 </body>
 </html>

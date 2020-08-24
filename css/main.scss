@@ -1,0 +1,188 @@
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    font-size: 62.5%;
+    background-color: #f9f9f9;
+}
+
+.grid-wrapper {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr max-content 20% 1fr;
+    grid-template-rows: 3.5rem 3fr repeat(2, 1fr) max-content;
+    grid-template-areas: 
+    "header     header      header      header"
+    ".          main        sidebar     ."
+    ".          headline    sidebar     ."
+    ".     video-description sidebar    ."
+    ".          comments    sidebar     .";
+}
+
+.header {
+    
+    background-color: #ffffff;
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &__icon {
+        width: 1.4rem;
+        height: 1.4rem;
+        fill: #606060;
+        margin: 0 2rem;
+    cursor: pointer;
+
+    }
+    
+
+    &__logo {
+        flex: 0 1 26%;
+    }
+}
+
+.search {
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //background-color: teal;
+
+    &__bar {
+        flex: 0 0 70%;
+        font-family: inherit;
+        font-size: 1rem;
+        background-color: #fff;
+        border: 1px solid rgb(165, 165, 165);
+        border-radius: 3px;
+        color: inherit;
+        padding: .7rem 1rem;
+        margin-right: -4rem;
+        height: 1rem;
+    }
+
+    &__button {
+        height: 1rem;
+        width: 1rem;
+        //margin-right: -2rem;
+        background-color: #fff;
+        border: none;
+        //align-self: stretch;
+        cursor: pointer;
+        
+    }
+
+    &__icon {
+        height: 1rem;
+        width: 1rem;
+        fill: #606060;
+        padding: .7rem 1rem;
+        border: 1px solid rgb(165, 165, 165);
+        cursor: pointer;
+        border-radius: 0 3px 3px 0;
+        background-color: rgb(241, 239, 239);
+
+    }
+}
+
+.user {
+    flex: 0 0 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+
+    &__camera {
+        width: 1.25rem;
+        height: 1.25rem;
+        fill: #606060;
+        cursor: pointer;
+    }
+
+    &__box-menu {
+        width: 1.25rem;
+        height: 1.25rem;
+        fill: #606060;
+        cursor: pointer;
+    }
+
+    &__bell {
+        width: 1.25rem;
+        height: 1.25rem;
+        fill: #606060;
+        cursor: pointer;
+    }
+
+    &__icon {
+        width: 2.2rem;
+        height: 2.2rem;
+        border-radius: 50%;
+    }
+}
+
+.main {
+    grid-area: main;
+    padding: 1.6rem 1.6rem 0 1.6rem;
+    
+}
+
+.sidebar {
+    background-color: cornflowerblue;
+    grid-area: sidebar;
+}
+
+
+.video-description {
+    background-color: rgb(140, 218, 218);
+    grid-area: video-description;
+}
+
+.comments {
+    background-color: goldenrod;
+    grid-area: comments;
+}
+
+.headline {
+    grid-area: headline;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, min-content), 1fr;
+    grid-template-areas:    "main   main    ."
+                            "views  date    cta";
+    padding: 0 1.6rem;                       
+
+
+    &__main {
+        grid-area: main;
+        align-self: center;
+        font-weight: lighter;
+        font-size: 1.1rem;
+    }
+
+    &__views {
+        grid-area: views;
+    }
+
+    &__date {
+        grid-area: date;
+        background-color: ivory;
+    }
+
+    &__cta {
+        grid-area: cta;
+    }
+}
